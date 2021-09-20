@@ -27,7 +27,7 @@ export class OfertasPage implements OnInit {
       imagen: 'assets/p2.jfif'
     },
     {
-      name: 'Jeans mujer',
+      name: 'Jeans M',
       precio: '$15.990',
       imagen: 'assets/p3.jfif'
     },
@@ -45,6 +45,21 @@ export class OfertasPage implements OnInit {
       name: 'Blusa',
       precio: '$15.990',
       imagen: 'assets/p6.jfif'
+    },
+    {
+      name: 'Falda negra',
+      precio: '$19.990',
+      imagen: 'assets/p7.jfif'
+    },
+    {
+      name: 'Falda mujer',
+      precio: '$24.990',
+      imagen: 'assets/p8.jfif'
+    },
+    {
+      name: 'Falda verde',
+      precio: '$15.990',
+      imagen: 'assets/p9.jfif'
     },
 
 

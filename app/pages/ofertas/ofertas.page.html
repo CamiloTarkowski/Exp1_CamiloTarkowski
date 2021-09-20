@@ -35,3 +35,17 @@
     </ion-button>
     </ion-buttons>
   </ion-toolbar>
+
+  <ion-content>
+    <ion-list>
+      <ion-item *ngFor="let i of productos"
+                >
+                <img slot="start"src={{i.imagen}}  style="padding-top:10px; width: 80px; height:80px;">
+                <ion-text slot="start"><p style="font-size: 12px; width:80px;">{{i.name}}</p>
+                  <p style="font-size: 13px;color:#ac2c2c;">{{i.precio}}<p></p></ion-text>
+                  <ion-icon  slot="end" name="heart-outline"></ion-icon>
+                
+                
+      </ion-item>
+    </ion-list>
+  </ion-content>
