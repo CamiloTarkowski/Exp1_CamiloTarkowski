@@ -1,13 +1,80 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>registro</ion-title>
+
+<ion-content> <!--Toolbar de hora, señal, etc.-->
+  <ion-toolbar color="#9522FF" class="tb_height tb1_color">
   </ion-toolbar>
-</ion-header>
 
-<ion-content>
+  <ion-toolbar color="primary"> <!--toolbar menu, search y carrito-->
+    <ion-buttons slot="start">
+      <ion-button (click)="mostrarMenu()">
+        <ion-icon color="light" slot="icon-only" name="menu-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="primary">
+      <ion-button>
+        <ion-icon name="cart-outline" color="light"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-searchbar mode="md" placeholder="Buscar "></ion-searchbar>
+  </ion-toolbar>
 
-  <ion-button routerLink="/inicio" shape="round">
-    Volver
+  <ion-toolbar color="primary"><!--toolbar ubicación y usuario-->
+    <ion-buttons slot="start">
+      <ion-button>
+      <ion-icon  name="location-outline" color="light"></ion-icon>
+    </ion-button>
+    </ion-buttons>
+
+    <ion-buttons>
+      <ion-text color="light">
+        <p class="ta_center">Enviar a Nuevo Usuario - Fra</p>
+      </ion-text>
+    </ion-buttons>
+
+    <ion-buttons slot="end">
+      <ion-button>
+      <ion-icon  name="chevron-forward-outline" color="light"></ion-icon>
+    </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+
+  <!--body-->
+
+  <ion-item>
+    <ion-label position="stacked">Nombre</ion-label>
+    <ion-input type="text"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="stacked">Apellido</ion-label>
+    <ion-input type="text" ></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="stacked">Número</ion-label>
+    <ion-input type="number"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="stacked">E-mail</ion-label>
+    <ion-input type="text"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="stacked">Clave</ion-label>
+    <ion-input type="password"></ion-input>
+  </ion-item>
+  <ion-text>
+    <p class="leemeclave">Tu clave debe tener entre 6 y 20 caracteres. No incluyas tu nombre, 
+      apellido o e-mail, ni caracteres idénticos consecutivos.
+    </p>
+  </ion-text>
+  <ion-toolbar class="padding1">
+    <ion-checkbox slot="start"></ion-checkbox>
+    <ion-text>
+      <p class="condiciones">Acepto los <a href="#">Términos y 
+        Condiciones </a> y autorizo el uso de mis datos de acuerdo a la <a href="#">Declaración de Privacidad</a>.<p>
+    </ion-text>
+  </ion-toolbar>
+  <ion-button expand="block" mode="ios" routerLink="/inicio">
+    Continuar
   </ion-button>
 
+
+  
 </ion-content>

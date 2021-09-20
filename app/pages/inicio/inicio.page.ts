@@ -38,7 +38,7 @@ export class InicioPage implements OnInit {
     },
     {
       icon:'heart-outline',
-      name: 'Favoritos',
+      name: 'Favoritos',    
       redirecTo:'/inicio'
     },
     {
