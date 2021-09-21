@@ -38,26 +38,28 @@
   </ion-toolbar>
 
   <!--body-->
-
-  <ion-item>
+<form #formulario="ngForm" (ngSubmit)="onSubmit()"> 
+  <ion-item mode="md">
     <ion-label position="stacked">Nombre</ion-label>
-    <ion-input type="text"></ion-input>
+    <ion-input type="text" name="nombre" [(ngModel)]="usuario.nombre" required></ion-input>
   </ion-item>
-  <ion-item>
+  <ion-item mode="md">
     <ion-label position="stacked">Apellido</ion-label>
-    <ion-input type="text" ></ion-input>
+    <ion-input type="text" name="apellidos" [(ngModel)]="usuario.apellidos" required></ion-input>
   </ion-item>
-  <ion-item>
-    <ion-label position="stacked">Número</ion-label>
-    <ion-input type="number"></ion-input>
+  <ion-item mode="md">
+    <ion-label position="stacked" >Número</ion-label>
+    <ion-input type="number" name="fono" [(ngModel)]="usuario.fono" required></ion-input>
   </ion-item>
-  <ion-item>
+  <ion-item mode="md"> 
     <ion-label position="stacked">E-mail</ion-label>
-    <ion-input type="text"></ion-input>
+    <ion-input type="email" name="email" [(ngModel)]="usuario.mail"
+    pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$"
+    required></ion-input>
   </ion-item>
-  <ion-item>
+  <ion-item mode="md">
     <ion-label position="stacked">Clave</ion-label>
-    <ion-input type="password"></ion-input>
+    <ion-input type="password" [(ngModel)]="usuario.password" name="password" required></ion-input>
   </ion-item>
   <ion-text>
     <p class="leemeclave">Tu clave debe tener entre 6 y 20 caracteres. No incluyas tu nombre, 
@@ -71,9 +73,10 @@
         Condiciones </a> y autorizo el uso de mis datos de acuerdo a la <a href="#">Declaración de Privacidad</a>.<p>
     </ion-text>
   </ion-toolbar>
-  <ion-button expand="block" mode="ios" routerLink="/inicio">
+  <ion-button [disabled]="formulario.invalid" type="submit"expand="block" mode="ios" routerLink="/inicio">
     Continuar
   </ion-button>
+</form>
 
 
   

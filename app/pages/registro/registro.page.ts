@@ -9,9 +9,22 @@ import { MenuController } from '@ionic/angular';
 })
 export class RegistroPage implements OnInit {
 
+  usuario = {
+    nombre : '',
+    apellidos : '',
+    fono : '',
+    email : '',
+    password:'' 
+  }
+
   constructor(private menuController: MenuController) { }
 
   ngOnInit() {
+  }
+
+  onSubmit(){
+    console.log('submit');
+    console.log(this.usuario);
   }
 
   mostrarMenu(){
