@@ -14,7 +14,8 @@ export class RegistroPage implements OnInit {
     apellidos : '',
     fono : '',
     email : '',
-    password:'' 
+    password:'',
+    condiciones:'true' 
   }
 
   constructor(private menuController: MenuController) { }

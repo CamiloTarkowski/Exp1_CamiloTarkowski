@@ -67,7 +67,7 @@
     </p>
   </ion-text>
   <ion-toolbar class="padding1">
-    <ion-checkbox slot="start"></ion-checkbox>
+    <ion-checkbox slot="start"  [(ngModel)]="usuario.condiciones" name="condiciones" required></ion-checkbox>
     <ion-text>
       <p class="condiciones">Acepto los <a href="#">Términos y 
         Condiciones </a> y autorizo el uso de mis datos de acuerdo a la <a href="#">Declaración de Privacidad</a>.<p>
