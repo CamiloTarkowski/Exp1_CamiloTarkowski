@@ -21,11 +21,7 @@ export class AppComponent {
       redirecTo: '/inicio'
     },
     
-    {
-      icon: 'person-add-outline',
-      name: 'Registro',
-      redirecTo: '/registro'
-    },
+    
     {
       icon:'bag-handle-outline',
       name: 'Ver ofertas',
@@ -46,5 +42,10 @@ export class AppComponent {
       name: 'Mis compras',
       redirecTo:'/inicio'
     },
+    {
+      icon:'log-out-outline',
+      name: 'Cerrar sesión',
+      redirecTo:'/login'
+    }
   ]
 }

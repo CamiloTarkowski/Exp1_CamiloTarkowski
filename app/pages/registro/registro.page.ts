@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MenuController } from '@ionic/angular';
+import { FireserviceService } from 'src/app/fireservice.service';
 
 
 @Component({
@@ -15,12 +16,40 @@ export class RegistroPage implements OnInit {
     fono : '',
     email : '',
     password:'',
-    condiciones:'true' 
   }
 
-  constructor(private menuController: MenuController) { }
+  constructor(
+    private menuController: MenuController,
+    public fireService: FireserviceService
+    ) { }
+
 
   ngOnInit() {
+  }
+
+  signup(){
+    this.fireService.signup({email:this.usuario.email,password:this.usuario.password}).then(res=>{
+      if(res.user.uid){
+        let data = {
+          email:this.usuario.email,
+          password:this.usuario.password,
+          nombre:this.usuario.nombre,
+          apellidos:this.usuario.apellidos,
+          fono:this.usuario.fono,
+          uid:res.user.uid
+
+        }
+        this.fireService.saveDetails(data).then(res=>{
+          alert('¡Registro exitoso!');
+        },err=>{
+          console.log(err);
+        })
+
+      }
+    },err=>{
+      alert(err.message);
+      console.log(err);
+    })
   }
 
   onSubmit(){
